@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portal operacional do Sistema de Reservas para um Hotel">
+  <title>Hotel Aurora | Reservas</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span>HA</span> Hotel Aurora</a>
+    <nav aria-label="Navegacao principal">
+      <a class="active" href="index.html">Reservas</a>
+      <a href="sobre.html">Sobre o ambiente</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Operacao hoteleira em cloud</p>
+        <h1>Reservas organizadas, atendimento sem atrasos.</h1>
+        <p class="lead">Portal estatico publicado automaticamente no Apache por scripts Shell executados em um container Ubuntu.</p>
+        <a class="button" href="#nova-reserva">Simular nova reserva</a>
+      </div>
+      <aside class="status-card" aria-label="Status operacional">
+        <p>Status do ambiente</p>
+        <strong><span class="status-dot"></span> Portal disponivel</strong>
+        <dl>
+          <div><dt>Servidor</dt><dd>Apache</dd></div>
+          <div><dt>Deploy</dt><dd>Automatizado</dd></div>
+          <div><dt>Backup</dt><dd>Compactado</dd></div>
+        </dl>
+      </aside>
+    </section>
+
+    <section class="metrics" aria-label="Indicadores do hotel">
+      <article><span>Reservas hoje</span><strong>18</strong><small>+12% na semana</small></article>
+      <article><span>Ocupacao</span><strong>76%</strong><small>38 de 50 quartos</small></article>
+      <article><span>Check-ins</span><strong>09</strong><small>Proximas 24 horas</small></article>
+      <article><span>Disponiveis</span><strong>12</strong><small>Quartos liberados</small></article>
+    </section>
+
+    <section class="content-grid" id="nova-reserva">
+      <form class="panel" id="reservation-form">
+        <div class="section-heading">
+          <div><p class="eyebrow">Atendimento</p><h2>Nova reserva</h2></div>
+          <span class="tag">Demonstracao</span>
+        </div>
+        <label>Nome do hospede<input required name="hospede" placeholder="Nome completo"></label>
+        <label>E-mail<input required type="email" name="email" placeholder="hospede@email.com"></label>
+        <div class="form-row">
+          <label>Quarto<select name="quarto"><option>101 - Standard</option><option>202 - Luxo</option><option>303 - Familia</option><option>404 - Suite Master</option></select></label>
+          <label>Hospedes<input type="number" name="quantidade" min="1" max="6" value="2"></label>
+        </div>
+        <div class="form-row">
+          <label>Entrada<input required type="date" name="entrada"></label>
+          <label>Saida<input required type="date" name="saida"></label>
+        </div>
+        <button type="submit">Registrar simulacao</button>
+        <p class="form-message" id="form-message" role="status"></p>
+      </form>
+
+      <section class="panel reservations">
+        <div class="section-heading">
+          <div><p class="eyebrow">Painel rapido</p><h2>Proximas chegadas</h2></div>
+          <span class="tag tag-green">Operacional</span>
+        </div>
+        <div class="reservation-item"><div class="avatar">MC</div><div><strong>Mariana Costa</strong><span>Suite Master · 14:00</span></div><span class="badge">Confirmada</span></div>
+        <div class="reservation-item"><div class="avatar">RL</div><div><strong>Rafael Lima</strong><span>Quarto Luxo · 15:30</span></div><span class="badge">Confirmada</span></div>
+        <div class="reservation-item"><div class="avatar">AS</div><div><strong>Ana Souza</strong><span>Quarto Familia · 17:00</span></div><span class="badge badge-wait">Pendente</span></div>
+        <div class="automation-note">
+          <strong>Automacao ativa</strong>
+          <p>Deploy, backup, monitoramento e relatorio sao executados pelos scripts em <code>/app/scripts</code>.</p>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <span>Trabalho 03 - Cloud Computing</span>
+    <span>Guilherme Stein Zunino Sgrott · Unidavi</span>
+  </footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,8 @@
+.env
+backups/*.tar.gz
+logs/*.log
+logs/relatorio_execucao.txt
+relatorio-final/Relatorio_Final_Trabalho_03.docx
+relatorio-final/*_sanitized.docx
+!backups/.gitkeep
+!logs/.gitkeep

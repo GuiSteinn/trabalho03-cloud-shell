@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sobre | Hotel Aurora</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span>HA</span> Hotel Aurora</a>
+    <nav aria-label="Navegacao principal"><a href="index.html">Reservas</a><a class="active" href="sobre.html">Sobre o ambiente</a></nav>
+  </header>
+  <main class="about-page">
+    <section class="about-hero">
+      <p class="eyebrow">Trabalho 03</p>
+      <h1>Linux, Shell Script e Automacao Operacional</h1>
+      <p class="lead">Este ambiente simula a operacao Linux de um sistema de reservas de hotel em cloud.</p>
+    </section>
+    <section class="about-grid">
+      <article class="panel"><span class="step">01</span><h2>Container Ubuntu</h2><p>O Docker reproduz uma instancia Linux isolada, configurada de forma repetivel pelo Dockerfile e Docker Compose.</p></article>
+      <article class="panel"><span class="step">02</span><h2>Apache e deploy</h2><p>O site estatico e copiado de <code>/app/source</code> para <code>/var/www/html</code>, com validacao e log da publicacao.</p></article>
+      <article class="panel"><span class="step">03</span><h2>Operacao automatizada</h2><p>Scripts cuidam de atualizacao, estrutura, backups, processos, monitoramento, usuarios, permissoes e relatorios.</p></article>
+      <article class="panel"><span class="step">04</span><h2>Persistencia</h2><p>Dados operacionais usam volume Docker; backups e logs ficam mapeados para pastas do repositorio.</p></article>
+    </section>
+    <section class="panel architecture">
+      <p class="eyebrow">Fluxo tecnico</p>
+      <h2>Como a solucao funciona</h2>
+      <div class="flow"><span>Navegador</span><b>→</b><span>localhost:8080</span><b>→</b><span>Apache</span><b>→</b><span>Site do hotel</span></div>
+      <p>Aluno: <strong>Guilherme Stein Zunino Sgrott</strong><br>Instituicao: <strong>Unidavi</strong></p>
+    </section>
+  </main>
+  <footer><span>Trabalho 03 - Cloud Computing</span><span>Sistema de Reservas para um Hotel</span></footer>
+</body>
+</html>
+

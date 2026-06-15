@@ -1,0 +1,16 @@
+services:
+  hotel-linux:
+    build: .
+    image: ${DOCKERHUB_USERNAME:-seu-usuario}/trabalho03-hotel-shell:latest
+    container_name: trabalho03-linux
+    ports:
+      - "${APACHE_PORT:-8080}:80"
+    volumes:
+      - hotel_dados:/app/hotel/dados
+      - ./backups:/app/backups
+      - ./logs:/app/logs
+    restart: unless-stopped
+
+volumes:
+  hotel_dados:
+    name: trabalho03_hotel_dados
