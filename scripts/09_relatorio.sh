@@ -23,8 +23,8 @@ gerar_relatorio() {
     {
         echo "$PROJETO"
         echo "Aluno: $ALUNO"
+        echo "Gerado em: $(date '+%Y-%m-%d %H:%M:%S')"
         echo "Tema: $TEMA"
-        echo "Gerado em: $(date '+%Y-%m-%d %H:%M:%S %Z')"
 
         secao "ESPACO EM DISCO"
         df -h /
